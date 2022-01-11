@@ -5,7 +5,9 @@ import (
 	"dbuilder/newf"
 	"fmt"
 	"os"
+	"runtime"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -39,6 +41,9 @@ func main() {
 			new.ShowDirs()
 		case "":
 			fmt.Println(new.CreateDirFiles())
+			if runtime.GOOS != "linux" {
+				time.Sleep(time.Second * 3)
+			}
 			return
 		default:
 			fmt.Println("# OPÇÃO INVÁLIDA #")

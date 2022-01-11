@@ -187,7 +187,7 @@ func (f *new_dir) createFilesTscproj() {
 	}
 }`
 	for i := 1; i <= f.qtd_modules; i++ {
-		root_name_files := fmt.Sprintf("./%s/%s_#%d.tscproj", f.name_project, f.name_project, i)
+		root_name_files := fmt.Sprintf("./%s/%s_0%d.tscproj", f.name_project, f.name_project, i)
 		os.WriteFile(root_name_files, []byte(str), os.ModePerm)
 	}
 }
