@@ -11,15 +11,13 @@ import (
 )
 
 func main() {
-	//var opcoes, addDir string
-
 	new := newf.New()
 
 	fmt.Println("====================== BEM-VINDO AO DIR BUILDER =======================")
-	// Define name Project
+	// Define o nome do projeto
 	nomeProjeto := input("INFORME O NOME DO PROJETO > ")
 	fmt.Println(new.NameProject(nomeProjeto))
-	// Define Quantity modules
+	// Define quantidade módulos
 	fmt.Println("=============================== MÓDULOS ===============================")
 	quantidade := input("INFORME A QUANTIDADE DE MÓDULOS > ")
 	fmt.Println(new.QuantityModules(quantidade))
@@ -52,6 +50,7 @@ func main() {
 	}
 
 }
+// Entrada padrão do teclado
 func input(txt string) string {
 	ler := bufio.NewReader(os.Stdin)
 	fmt.Print(txt)
