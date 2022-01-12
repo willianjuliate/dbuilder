@@ -29,14 +29,14 @@ func main() {
 		opcoes := input("[A] - ADICIONAR NOVA PASTA\n[D] - DELETAR PASTA PADRÃO\n[ ] - VAZIO PARA SAIR\n> ")
 
 		switch opcoes {
-		case "A", "C", "ADD", "CRIAR", "ADCIONAR":
+		case "A", "C", "ADD", "CRIAR", "ADICIONAR":
 			new.ShowDirs()
-			opcao_dir := input("ADD: INFORME O NOME DA(s) NOVA(s) PASTA(s) SEPARADAS POR VIRGULAS (,)\n> ")
+			opcao_dir := input(fmt.Sprintf("[%s]: INFORME O NOME DA(s) NOVA(s) PASTA(s) SEPARADAS POR VIRGULAS (,)\n> ", opcoes))
 			new.AddNewDirs(opcao_dir)
 			new.ShowDirs()
 		case "D", "R", "E", "EXCLUIR", "DELETAR", "REMOVER":
 			new.ShowDirs()
-			opcao_dir := input("DEL: INFORME O NOME DA(s) PASTAS A SER DELETADAS SEPARADAS POR VIRGULA (,)\n>")
+			opcao_dir := input(fmt.Sprintf("[%s]: INFORME O NOME DA(s) PASTAS A SER DELETADAS SEPARADAS POR VIRGULA (,)\n>", opcoes))
 			new.RemoveDirs(opcao_dir)
 			new.ShowDirs()
 		case "":
